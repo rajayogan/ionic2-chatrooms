@@ -1,0 +1,14 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <h2>Enter your name to proceed</h2>
+  <ion-input [(ngModel)]="nickname" placeholder="Enter your nickname"></ion-input>
+  <button [hidden]="nameset" (click)="setname(nickname)">Set</button>
+  <button [hidden]="!nameset" (click)="navtoroomone()">Room 1</button>
+  <button [hidden]="!nameset" (click)="navtoroomtwo()">Room 2</button>
+  
+</ion-content>
